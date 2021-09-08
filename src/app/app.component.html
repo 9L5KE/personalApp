@@ -1,0 +1,25 @@
+<button class="btn btn-success" (click)="mostrarModalNuevoUsuario(modalNuevoUsuario)"> Abrir modal Nuevo Usuario</button>
+
+
+
+
+<app-listar-usuarios [lista_usuarios]="lista_usuarios"></app-listar-usuarios>
+
+<ng-template #modalNuevoUsuario let-c="close" let-d="dismiss">
+<div class="modal-header d-flex align-items-center">
+    <span class="h5 m-0"></span>
+    <h2>Modal - Registrar Usuario</h2>
+</div>
+<div class="modal-body">
+    <app-crear-usuario (setUsuario)="recibirUsuario($event)"></app-crear-usuario>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-outline-secondary btn-lg" (click)="c('Close')">
+Cerrar
+</button>
+</div>
+</ng-template>
+<ng-container *ngFor="">
+
+
+</ng-container>

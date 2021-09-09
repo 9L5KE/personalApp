@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h3>Lista de usuarios</h3>
+        <h3 appHighLight>Lista de usuarios</h3>
     </div>
     <div class="card-body">
         <Table class="table">
@@ -30,10 +30,10 @@
                         {{usuario.nombre}}
                     </td>
                     <td>
-                        {{usuario.apellido_paterno}}
+                        {{usuario.apellido_paterno | upperCase }}
                     </td>
                     <td>
-                        {{usuario.apellido_materno}}
+                        {{usuario.apellido_materno | lowerCase}}
                     </td>
                     <td>
                         {{usuario.edad}}

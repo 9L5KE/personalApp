@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "personalapp-8185f": {
+      "hosting": {
+        "angularAPP": [
+          "personalapp-8185f"
+        ]
+      }
+    }
+  }
+}

@@ -9,6 +9,10 @@ import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.
 import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios.component';
 import { UpperCasePipe } from './utils/pipes/upper-case.pipe';
 import { HighLightDirective } from './utils/directives/high-light.directive';
+import { LowercasePipe } from './utils/pipes/lowercase.pipe';
+import { ReturnNamePipe } from './utils/pipes/return-name.pipe';
+import { OnFocusInitDirective } from './utils/directives/on-focus-init.directive';
+import { UsuarioServiceService } from './services/usuario-service.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,10 @@ import { HighLightDirective } from './utils/directives/high-light.directive';
     CrearUsuarioComponent,
     ListarUsuariosComponent,
     UpperCasePipe,
-    HighLightDirective,   
+    HighLightDirective,
+    LowercasePipe,
+    ReturnNamePipe,
+    OnFocusInitDirective,   
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,7 @@ import { HighLightDirective } from './utils/directives/high-light.directive';
     NgbModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UsuarioServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

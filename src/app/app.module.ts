@@ -13,6 +13,12 @@ import { LowercasePipe } from './utils/pipes/lowercase.pipe';
 import { ReturnNamePipe } from './utils/pipes/return-name.pipe';
 import { OnFocusInitDirective } from './utils/directives/on-focus-init.directive';
 import { UsuarioServiceService } from './services/usuario-service.service';
+import {
+  AngularFirestore,
+  AngularFirestoreModule,
+} from '@angular/fire/compat/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -23,15 +29,17 @@ import { UsuarioServiceService } from './services/usuario-service.service';
     HighLightDirective,
     LowercasePipe,
     ReturnNamePipe,
-    OnFocusInitDirective,   
+    OnFocusInitDirective,
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'personalApp'),
+    AngularFirestoreModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [UsuarioServiceService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

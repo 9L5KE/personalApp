@@ -1,7 +1,11 @@
+<h1 appHighLight>Maestro de usuarios</h1>
+<ul>
+  <li *ngFor="let usuario of usuarios_de_firestore">
+    {{ usuario.nombre }} {{ usuario.apellido_paterno }}
+  </li>
+</ul>
 
-
-
-<button class="btn btn-success" (click)="mostrarModalNuevoUsuario(modalNuevoUsuario)"> Abrir modal Nuevo Usuario</button>
+<!-- <button class="btn btn-success" (click)="mostrarModalNuevoUsuario(modalNuevoUsuario)"> Abrir modal Nuevo Usuario</button>
 
 
 
@@ -25,4 +29,4 @@ Cerrar
 <ng-container *ngFor="">
 
 
-</ng-container>
+</ng-container> -->
